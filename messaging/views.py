@@ -1,7 +1,23 @@
 
 from rest_framework import generics
-from .models import Message
-from .serializers import MessageSerializer
+from rest_framework.response import Response
+from rest_framework import status
+from .models import Message, ConferenceRoom
+from .serializers import MessageSerializer, ConferenceRoomSerializer
+
+class CreateConferenceRoomView(generics.CreateAPIView):
+    queryset = ConferenceRoom.objects.all()
+    serializer_class = ConferenceRoomSerializer
+
+class JoinConferenceRoomView(generics.UpdateAPIView):
+    queryset = ConferenceRoom.objects.all()
+    serializer_class = ConferenceRoomSerializer
+
+    def update(self, request, *args, **kwargs):
+        room = self.get_object()
+        room.participants.add(request.user)
+        room.save()
+        return Response({'status': 'participant added'}, status=status.HTTP_200_OK)
 
 class SendMessageView(generics.CreateAPIView):
     queryset = Message.objects.all()

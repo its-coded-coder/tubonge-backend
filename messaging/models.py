@@ -12,3 +12,12 @@ class Message(models.Model):
 
     def __str__(self):
         return f'Message from {self.sender} to {self.receiver} at {self.timestamp}'
+
+class ConferenceRoom(models.Model):
+    name = models.CharField(max_length=255)
+    host = models.ForeignKey(User, related_name='hosted_rooms', on_delete=models.CASCADE)
+    participants = models.ManyToManyField(User, related_name='joined_rooms')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
