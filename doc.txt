@@ -1,0 +1,32 @@
+
+Project Objective:
+The objective of this project is to develop a backend service for a messaging application called "Tubonge". The backend will handle user authentication, message storage, and retrieval. The service will be built using Django and PostgreSQL.
+
+Key Features:
+1. User Authentication:
+   - Register new users
+   - Login existing users
+   - JWT-based authentication
+
+2. Messaging:
+   - Send messages between users
+   - Retrieve message history between users
+
+3. Database:
+   - Use PostgreSQL for data storage
+   - Create a database named "tubonge_db"
+
+4. API Endpoints:
+   - User registration and login endpoints
+   - Endpoints for sending and retrieving messages
+
+5. Settings:
+   - Configure settings for PostgreSQL database connection
+   - Use environment variables for sensitive information
+
+6. Testing:
+   - Write unit tests for the API endpoints
+   - Ensure 100% test coverage
+
+7. Documentation:
+   - Provide API documentation using Swagger or similar tool

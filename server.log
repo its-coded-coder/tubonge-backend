@@ -1,0 +1,5 @@
+Watching for file changes with StatReloader
+Forbidden: /messaging/history/
+[18/Oct/2024 06:52:12] "GET /messaging/history/ HTTP/1.1" 403 58
+Forbidden: /messaging/history/
+[18/Oct/2024 06:53:27] "GET /messaging/history/ HTTP/1.1" 403 58
