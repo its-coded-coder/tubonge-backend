@@ -22,16 +22,6 @@ The objective of this project is to develop a backend service for a messaging ap
    - User registration and login endpoints
    - Endpoints for sending and retrieving messages
 
-5. **Settings**:
-   - Configure settings for PostgreSQL database connection
-   - Use environment variables for sensitive information
-
-6. **Testing**:
-   - Write unit tests for the API endpoints
-   - Ensure 100% test coverage
-
-7. **Documentation**:
-   - Provide API documentation using Swagger or similar tool
 
 ## Setup Instructions
 
